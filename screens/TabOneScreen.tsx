@@ -1,16 +1,11 @@
 import * as React from 'react';
-import { FlatList, ListViewBase, ScrollView, StyleSheet, TouchableOpacity, Image } from 'react-native';
-
-import EditScreenInfo from '../components/EditScreenInfo';
+import { FlatList, ListViewBase, ScrollView, StyleSheet, TouchableOpacity } from 'react-native';
 import { Text, View } from '../components/Themed';
 import { RootTabScreenProps } from '../types';
 
 import { SvgUri } from 'react-native-svg';
 
 export default function TabOneScreen({ navigation }: RootTabScreenProps<'TabOne'>) {
-
-  const placeholderCoinImage = '../assets/images/coin';
-
   const [isLoading, setLoading] = React.useState(true);
   const [data, setData] = React.useState([]);
 
@@ -32,8 +27,6 @@ export default function TabOneScreen({ navigation }: RootTabScreenProps<'TabOne'
 
   return (
     <View style={styles.container}>
-      <Text style={styles.title}>Crypto prices</Text>
-      <View style={styles.separator} lightColor="#eee" darkColor="rgba(255,255,255,0.1)" />
       <ScrollView
         showsVerticalScrollIndicator={true}
         showsHorizontalScrollIndicator={false}
@@ -86,7 +79,7 @@ const styles = StyleSheet.create({
   },
   subContainer: {
     width: 300,
-    height: 500,
+    // height: 500,
   },
   priceItem: {
     borderColor: '#ebe7dd',
