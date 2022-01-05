@@ -47,7 +47,7 @@ export default function TabOneScreen({ navigation }: RootTabScreenProps<'TabOne'
               <View style={styles.listRow}>
                 <SvgUri uri={item.logo_url} style={{ marginRight: 5 }} width="20" height="20" />
                 <Text style={{ fontSize: 20 }}>{item.name}</Text>
-                <Text style={{ fontSize: 20, marginLeft: 'auto' }}>$ {(Math.round(item.price * 100) / 100).toFixed(2)}</Text>
+                <Text style={{ fontSize: 20, marginLeft: 'auto' }}>$ {(Math.round(item.high * 100) / 100).toFixed(2)}</Text>
               </View>
             </TouchableOpacity>
           )}
